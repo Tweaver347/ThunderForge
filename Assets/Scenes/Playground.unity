@@ -927,11 +927,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6038b48140cb2a41bfea4a21081e683, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inputManager: {fileID: 0}
   targetTransform: {fileID: 0}
   cameraTransform: {fileID: 0}
   collisionLayers:
     serializedVersion: 2
     m_Bits: 0
+  cameraPivot: {fileID: 0}
   cameraFollowSpeed: 0.2
   cameraCollisionRadius: 0.2
   cameraCollisionOffset: 0.2
@@ -1027,11 +1029,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6038b48140cb2a41bfea4a21081e683, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inputManager: {fileID: 0}
   targetTransform: {fileID: 0}
-  cameraTransform: {fileID: 963194228}
+  cameraTransform: {fileID: 0}
   collisionLayers:
     serializedVersion: 2
     m_Bits: 256
+  cameraPivot: {fileID: 931255406}
   cameraFollowSpeed: 0.15
   cameraCollisionRadius: 0.2
   cameraCollisionOffset: 0.2
@@ -1205,6 +1209,6 @@ PrefabInstance:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 1492892140}
   - {fileID: 1274540571}
+  - {fileID: 1492892140}
   - {fileID: 383557672}

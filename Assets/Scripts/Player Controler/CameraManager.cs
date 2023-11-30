@@ -5,12 +5,12 @@ using UnityEngine;
 
 public class CameraManager : MonoBehaviour
 {
-    private InputManager inputManager;
+    [SerializeField] private InputManager inputManager;
 
     public Transform targetTransform;
     public Transform cameraTransform;
     public LayerMask collisionLayers;
-    private Transform cameraPivot;
+    [SerializeField] private Transform cameraPivot;
     private Vector3 cameraFollowVelocity = Vector3.zero;
     private float defaultPosition;
     public float cameraFollowSpeed = 0.15f;
@@ -18,8 +18,8 @@ public class CameraManager : MonoBehaviour
     public float cameraCollisionOffset = 0.2f; // how much the camera will jump off the collision object
     private Vector3 cameraVectorPosition;
     public float minimumCollisionOffset = 0.2f;
-    public float lookAngle;
-    public float pivotAngle;
+    public float lookAngle = 0f;
+    public float pivotAngle = 0f;
 
     public float cameraLookSpeed = 1.25f;
     public float cameraPivotSpeed = 1.25f;
@@ -30,7 +30,7 @@ public class CameraManager : MonoBehaviour
     private void Awake()
     {
         targetTransform = FindObjectOfType<PlayerManager>().transform;
-        cameraPivot = transform.GetChild(0);
+        //cameraPivot = transform.GetChild(0);
         inputManager = FindObjectOfType<InputManager>();
         cameraTransform = Camera.main.transform;
         defaultPosition = cameraTransform.localPosition.z;
